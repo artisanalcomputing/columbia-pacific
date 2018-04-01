@@ -1,1 +1,1 @@
-web: ./dist/build/columbia-pacific/columbia-pacific
+web: columbia-pacific   # $ cat *.cabal | grep executable
