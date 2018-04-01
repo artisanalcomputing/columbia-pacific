@@ -22,4 +22,5 @@ executable columbia-pacific
                        , aeson
                        , text
                        , transformers
+  other-modules:       ColmbiaPacific.Attractions
   ghc-options: -Wall
