@@ -14,7 +14,7 @@ cabal-version:       >=1.10
 extra-source-files:  README.md
 
 executable columbia-pacific
-  hs-source-dirs:      src
+  hs-source-dirs:      ., src
   main-is:             ColumbiaPacific.hs
   default-language:    Haskell2010
   build-depends:       base >= 4.7 && < 5
@@ -22,5 +22,5 @@ executable columbia-pacific
                        , aeson
                        , text
                        , transformers
-  other-modules:       columbiapacific.Attractions
+  other-modules:       ColumbiaPacific.Attractions
   ghc-options: -Wall
