@@ -1,0 +1,1 @@
+heroku buildpacks:set https://github.com/mfine/heroku-buildpack-stack.git -a columbia-pacific
