@@ -5,9 +5,11 @@ module Main where
 
 import Web.Scotty
 import qualified Data.Text.Lazy as T
+import System.Environment (getEnv)
 import Control.Monad.IO.Class
 import Data.Aeson (FromJSON, ToJSON)
 import GHC.Generics
+
 
 data Attraction = Attraction { attractionId :: String
                          , attractionName :: String
@@ -48,7 +50,8 @@ matchesId id attraction = attractionId attraction == id
 main :: IO ()
 main = do
   putStrLn "Starting Server..."
-  scotty 3000 $ do
+  port <- read <$> getEnv "PORT"
+  scotty port $ do
     get "/attractions" $ do
       json allAttractions
     get "/attractions/:id" $ do
