@@ -40,9 +40,26 @@ ftclatsop = Attraction { attractionId = "2"
                  , address = "92343 Fort Clatsop Road - Astoria, OR."
                  , image = ""
                  , description = "Reconstructed fort, picnic areas and trails." }
-
+                 
+leadbetter :: Attraction
+leadbetter = Attraction { attractionId = "11"
+                 , attractionName = "Leadbetter Point State Park"
+                 , location = "pacific"
+                 , information = "http://parks.state.wa.us/537/Leadbetter-Point"
+                 , address = "Leadbetter Point State Park Ocean Park, WA 98640"
+                 , image = ""
+                 , description = "Natural area open for day use with beach frontage on the Pacific Ocean and Willapa Bay." }
+                 
+oysterville :: Attraction
+oysterville = Attraction { attractionId = "12"
+                 , attractionName = "Historic Oysterville"
+                 , location = "pacific"
+                 , information = "http://www.oysterville.org/"
+                 , address = "3012 Oysterville Rd, Oysterville, WA 98641"
+                 , image = ""
+                 , description = "Historic 80-acre community on the Long Beach Peninsula." }
 allAttractions :: [Attraction]
-allAttractions = [ftstevens, ftclatsop]
+allAttractions = [ftstevens, ftclatsop, leadbetter, oysterville]
 
 matchesId :: String -> Attraction -> Bool
 matchesId id attraction = attractionId attraction == id
